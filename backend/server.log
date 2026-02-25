@@ -1,0 +1,31 @@
+2026/02/25 18:29:49 No .env file found, using environment variables
+2026/02/25 18:29:49 Connected to SQLite database: ./hustlalink.db
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /api/health               --> hustlalink/backend/routes.RegisterRoutes.func1 (4 handlers)
+[GIN-debug] POST   /api/auth/register        --> hustlalink/backend/controllers.Register (4 handlers)
+[GIN-debug] POST   /api/auth/login           --> hustlalink/backend/controllers.Login (4 handlers)
+[GIN-debug] GET    /api/jobs                 --> hustlalink/backend/controllers.ListJobs (4 handlers)
+[GIN-debug] GET    /api/jobs/:id             --> hustlalink/backend/controllers.GetJob (4 handlers)
+[GIN-debug] POST   /api/jobs                 --> hustlalink/backend/controllers.CreateJob (5 handlers)
+[GIN-debug] PUT    /api/jobs/:id             --> hustlalink/backend/controllers.UpdateJob (5 handlers)
+[GIN-debug] DELETE /api/jobs/:id             --> hustlalink/backend/controllers.DeleteJob (5 handlers)
+[GIN-debug] GET    /api/employer/jobs        --> hustlalink/backend/controllers.GetEmployerJobs (5 handlers)
+[GIN-debug] GET    /api/employer/applications/:id --> hustlalink/backend/controllers.GetJobApplications (5 handlers)
+[GIN-debug] PUT    /api/employer/applications/:id/status --> hustlalink/backend/controllers.UpdateApplicationStatus (5 handlers)
+[GIN-debug] POST   /api/applications         --> hustlalink/backend/controllers.ApplyForJob (5 handlers)
+[GIN-debug] GET    /api/applications/mine    --> hustlalink/backend/controllers.GetMyApplications (5 handlers)
+[GIN-debug] GET    /api/ratings/seeker/:id   --> hustlalink/backend/controllers.GetSeekerRatings (4 handlers)
+[GIN-debug] POST   /api/ratings              --> hustlalink/backend/controllers.AddRating (5 handlers)
+2026/02/25 18:29:49 Server starting on port 8080
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2026/02/25 - 18:29:54 | 200 |   92.980094ms |             ::1 | POST     "/api/auth/login"
+[GIN] 2026/02/25 - 18:29:54 | 201 |    4.276843ms |             ::1 | POST     "/api/ratings"
+[GIN] 2026/02/25 - 18:29:54 | 200 |     225.784µs |             ::1 | GET      "/api/ratings/seeker/3"
+signal: killed
