@@ -1,7 +1,7 @@
 // src/pages/MainPage.jsx
 import { useState } from "react";
-import JobList from "../components/JobList";
-import UserTypeSelect from "../components/UserTypeSelect";
+import JobList from "./components/JobList";
+import UserTypeSelect from "./components/UserTypeSelect";
 
 const mockJobs = [
   { id: 1, title: "Laundry Service", type: "Laundry", name: "Aisha", rating: 5, reviews: 10 },
