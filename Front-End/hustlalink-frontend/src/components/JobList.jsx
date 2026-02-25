@@ -1,4 +1,16 @@
-import JobCard from "./JobCard"
+export function JobCard({job}) {
+  return (
+    <div>
+      <div>
+        <p>{job.id}</p>
+      </div>
+       <div>
+        <p>{job.name}</p>
+      </div>
+    </div>
+  )
+}
+
 
 function JobList({ jobs }) {
   return (

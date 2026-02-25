@@ -3,7 +3,7 @@ import { useState } from "react";
 import JobList from "./components/JobList";
 import UserTypeSelect from "./components/UserTypeSelect";
 
-const mockJobs = [
+const jobs = [
   { id: 1, title: "Laundry Service", type: "Laundry", name: "Aisha", rating: 5, reviews: 10 },
   { id: 2, title: "Carpentry Work", type: "Carpentry", name: "Peter", rating: 4, reviews: 7 },
   { id: 3, title: "Plumbing Fix", type: "Plumber", name: "John", rating: 3, reviews: 5 },
@@ -26,7 +26,7 @@ function MainPage() {
       
       <UserTypeSelect userType={userType} setUserType={setUserType} /><br/><br/>
 
-      <JobList jobs={mockJobs} />
+      <JobList jobs={jobs} />
     </div>
   );
 }
