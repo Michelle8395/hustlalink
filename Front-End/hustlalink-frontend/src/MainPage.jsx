@@ -2,6 +2,7 @@
 import { useState } from "react";
 import JobList from "./components/JobList";
 import UserTypeSelect from "./components/UserTypeSelect";
+import { getUsers } from "./api";
 
 const jobs = [
   { id: 1, title: "Laundry Service", type: "Laundry", name: "Aisha", rating: 5, reviews: 10 },
@@ -13,6 +14,15 @@ const jobs = [
 function MainPage() {
   const [location, setLocation] = useState("");
   const [userType, setUserType] = useState("job-seeker");
+  const [users, setUsers] = useState([])
+
+  const fetchUsers = async () => {
+  const users = await getUsers()
+  setUsers(users)
+  }
+  fetchUsers()
+
+  console.log("indexeddb users", users)
 
   return (
     <div style={{ padding: 20 }}>
